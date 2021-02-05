@@ -3,12 +3,18 @@ module.exports = {
     title: "melking-site",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-sass",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-offline",
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/icon.png`,
+        name: `Mel King`,
+        short_name: `Mel King`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -25,5 +31,11 @@ module.exports = {
       },
       __key: "pages",
     },
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-sharp",
   ],
 };
