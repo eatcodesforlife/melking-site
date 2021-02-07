@@ -8,11 +8,40 @@
 
 body {
   font-family: 'Hind', sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  margin-right: 0 auto;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+p {
+  margin-bottom: 1.5rem;
 }
 
 section {
   min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+section div {
   width: 90vw;
   max-width: 1170px;
   margin: 0 auto;
+}
+
+footer {
+  background-color: #111111;
+  color: white;
+  padding: 1rem 0;
 }

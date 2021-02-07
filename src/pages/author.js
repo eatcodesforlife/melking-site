@@ -1,11 +1,12 @@
 import React from 'react'
 import Author from '../components/Author'
+import Layout from '../components/Layout'
 
 const author = () => {
     return (
-        <div>
+        <Layout>
             <Author />
-        </div>
+        </Layout>
     )
 }
 

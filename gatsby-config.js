@@ -1,6 +1,13 @@
+
+
+
 module.exports = {
+  flags: {
+    THE_FLAG: false, 
+    PRESERVE_WEBPACK_CACHE: true,
+   },
   siteMetadata: {
-    title: "melking-site",
+    title: "Mel King",
   },
   plugins: [
     {
@@ -31,11 +38,8 @@ module.exports = {
       },
       __key: "pages",
     },
-    "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-sass",
     "gatsby-plugin-sharp",
     "gatsby-plugin-offline",
-    "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
   ],
 };

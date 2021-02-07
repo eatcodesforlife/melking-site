@@ -1,0 +1,31 @@
+.books {
+  padding-top: 75px;
+  background-color: #ffffff;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+.title h1,
+span {
+  letter-spacing: 0.5rem;
+}
+
+.bookImg div {
+  width: 10rem;
+  background: rgba(0, 0, 0, 0);
+  margin-bottom: 2.5rem;
+  -webkit-box-shadow: 10px 1px 180px -50px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px 1px 180px -50px rgba(0, 0, 0, 1);
+  box-shadow: 10px 1px 180px -50px rgba(0, 0, 0, 1);
+}
+
+.bookstore {
+  display: flex;
+  margin: 2rem auto;
+  justify-content: space-evenly;
+}
+
+.bookstoreLogo div {
+  width: 5rem;
+}

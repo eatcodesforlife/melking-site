@@ -8,15 +8,20 @@
   place-content: center;
 }
 
+.navbar h1,
+li {
+  cursor: pointer;
+}
+
 .navbar h1 {
   text-transform: uppercase;
   letter-spacing: 20px;
-  font-size: 35px;
+  font-size: 25px;
   margin-left: 20px;
   font-weight: 200;
 }
 
-ul {
+.navbar ul {
   display: flex;
   justify-content: space-evenly;
   height: 50px;
@@ -25,6 +30,8 @@ ul {
 li {
   align-self: flex-end;
   list-style: none;
+  font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+  margin-bottom: -25px;
 }

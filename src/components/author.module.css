@@ -1,0 +1,40 @@
+.author {
+  background-color: #703e97;
+  color: white;
+  padding-top: 75px;
+}
+.authorCenter {
+  display: grid;
+  margin: 0 auto;
+}
+.authorImg {
+  padding: 2rem 0;
+}
+
+.authorImg div {
+  width: 14rem;
+  padding: 0.5rem 0;
+  -webkit-box-shadow: -15px 15px 19px -6px rgba(0, 0, 0, 0.88);
+  -moz-box-shadow: -15px 15px 19px -6px rgba(0, 0, 0, 0.88);
+  box-shadow: -15px 15px 19px -6px rgba(0, 0, 0, 0.88);
+}
+
+@media screen and(min-width: 768px) {
+  .author div {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      'span span h1'
+      'span span article'
+      'span span article';
+  }
+  .author span {
+    grid-area: span;
+  }
+  .author h1 {
+    grid-area: h1;
+  }
+  .author article {
+    grid-area: article;
+  }
+}

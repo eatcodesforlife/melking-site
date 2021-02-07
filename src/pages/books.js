@@ -1,11 +1,12 @@
 import React from 'react'
 import Books from '../components/Books'
+import Layout from '../components/Layout'
 
 const books = () => {
     return (
-        <div>
+        <Layout>
             <Books/>
-        </div>
+        </Layout>
     )
 }
 
