@@ -1,0 +1,63 @@
+.author {
+  background-color: #703e97;
+  color: white;
+  padding-top: 75px;
+}
+.authorCenter {
+  display: grid;
+  margin: 0 auto;
+}
+.authorImg {
+  padding: 2rem 0;
+}
+
+.authorImg div {
+  width: 14rem;
+  padding: 0.5rem 0;
+  -webkit-box-shadow: 2px 6px 26px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 6px 26px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 6px 26px 5px rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (min-width: 1400px) {
+  .author h1 {
+    font-size: 4rem;
+    letter-spacing: 35px;
+  }
+
+  .author h1,
+  .authorInfo {
+    text-align: left;
+    margin: 0;
+    padding: 0 2rem;
+  }
+
+  .authorCenter {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 15% auto auto auto;
+    grid-column-gap: 2.5rem;
+    margin-bottom: 2.5rem;
+    grid-template-areas:
+      'portrait title'
+      'portrait text'
+      'portrait text'
+      'portrait text';
+  }
+  .authorImg {
+    grid-area: portrait;
+    display: grid;
+    place-content: center;
+  }
+
+  .authorImg div {
+    width: 20rem;
+  }
+  .title {
+    grid-area: title;
+  }
+  .authorInfo {
+    grid-area: text;
+    max-width: 685px;
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import { author, authorImg, authorCenter, authorInfo, title } from './author.module.css'
+import './author.css'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const getImage = graphql`{
@@ -20,13 +20,13 @@ const Author = () => {
 
     const authorImage = useStaticQuery(getImage)
     return (
-        <section className={author}>
-            <div className={authorCenter}>
-              <h1 className={title}>about mel</h1>
-              <span className={authorImg}>
+        <section className="author">
+            <article className="authorCenter">
+              <h1 className="title">about mel</h1>
+              <aside className="authorImg">
                 <Image fluid={authorImage.file.childImageSharp.fluid} alt='mel king'/>
-              </span>
-              <article className={authorInfo}>
+              </aside>
+              <div className="authorInfo">
                 <p>
                   The world should be safe for diversity; however, there are a lot of things the world should be but is not. Over time, many variances that caused gaps among many parties have been spanned, but in the corporate world race still caused a disconnection. Author Mel King shares the many gaps he experienced through his novel entitled Uncommon.
                 </p>
@@ -36,8 +36,8 @@ const Author = () => {
                 <p>
                   The author has been praised and criticized by many people – those who have witnessed his determination to defy racism in the corporate world in the United States of America. He consistently made efforts to show that reaching success had nothing to do with color. He appreciates his experiences, the good and the bad, as these experiences paved the way to his writing of Uncommon, which documents the challenges that Black Americans have in Corporate America. As readers get to know the author’s many challenges that he faced in his career, they will recognize the importance of just going forward and doing one’s best, independent of the environment.
                 </p>
-              </article>
-            </div>
+              </div>
+            </article>
         </section>
     )
 }
