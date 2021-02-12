@@ -7,7 +7,7 @@ module.exports = {
     PRESERVE_WEBPACK_CACHE: true,
    },
   siteMetadata: {
-    title: "Mel King",
+    title: "Mel King",    
   },
   plugins: [
     {
@@ -37,6 +37,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `./src/data/`,
+      },
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-offline",

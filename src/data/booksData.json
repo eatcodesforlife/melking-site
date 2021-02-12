@@ -1,0 +1,48 @@
+[
+  {
+    "title": "uncommon",
+    "subtitle": "a black man's journey",
+    "blurb": "As the title suggest, Mel King has had many “uncommon” experiences and this book only begins to document the beginning of them. In high school, he held an elected office, made the honor roll, lettered in sports, and wrote for the school newspaper—all while having a part time job and contributing to the family household. He is a Black American and in high school, his friends didn’t use the word, “uncommon,” but often said that he was different. Growing up in center city Los Angeles, he didn’t smoke, drink, or take drugs, yet he was frequently asked to go out with “the gang.”As Mel entered the Air Force, a Vietnam Vet, he continued to break grounds for people of color. At every assignment, in some form or fashion, he had been recognized for performance, dedication and leadership ability.",
+    "bookImage": "../images/books/uncommon.JPG",
+    "bookstoreLinks": [
+      {
+        "bookstoreName": "amazon",
+        "bookstoreImg" : "../images/bookstores/amazon.JPG",
+        "url": "https://www.amazon.com/Uncommon-Black-Journey-Mel-King/dp/1643670956/ref=sr_1_1?dchild=1&keywords=uncommon+by+mel+king&qid=1612682910&sr=8-1"
+      },
+      {
+        "bookstoreName": "barnes and noble",
+        "bookstoreImg" : "../images/bookstores/b&n.JPG",
+        "url": "https://www.barnesandnoble.com/w/uncommon-mel-king/1129802360?ean=9781643670959"
+      },
+      {
+        "bookstoreName": "books-a-million",
+        "bookstoreImg" : "../images/bookstores/bam.JPG",
+        "url": "https://www.booksamillion.com/p/Uncommon/Mel-King/9781643670959?id=8126181266996"
+      }
+    ]
+  },
+  {
+    "title": "uncommon ii",
+    "subtitle": "Black Can Make a Difference",
+    "blurb": "The author has been praised and criticized by many people – those who have witnessed his determination to defy racism in the corporate world in the United States of America. He consistently made efforts to show that reaching success had nothing to do with color. He appreciates his experiences, the good and the bad, as these experiences paved the way to his writing of Uncommon, which documents the challenges that Black Americans have in Corporate America. As readers get to know the author’s many challenges that he faced in his career, they will recognize the importance of just going forward and doing one’s best, independent of the environment.",
+    "bookImage": "../images/books/uncommonii.jpg",
+    "bookstoreLinks": [
+      { 
+        "bookstoreName": "amazon",
+        "bookstoreImg" : "../images/bookstores/amazon.JPG",
+        "url": "t.ly/IZLc"
+      },
+      {
+        "bookstoreName": "barnes and noble",
+        "bookstoreImg" : "../images/bookstores/b&n.JPG",
+        "url": "t.ly/4qjg"
+      },
+      {
+        "bookstoreName": "books-a-million",
+        "bookstoreImg" : "../images/bookstores/bam.JPG",
+        "url": "t.ly/g9zj"
+      }
+    ]
+  }
+] 

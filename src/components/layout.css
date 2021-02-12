@@ -16,6 +16,11 @@ a {
   color: white;
 }
 
+a:hover,
+a:focus {
+  color: #703e97;
+}
+
 h1 {
   text-transform: uppercase;
   letter-spacing: 20px;

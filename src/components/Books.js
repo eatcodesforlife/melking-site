@@ -1,53 +1,114 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import { books, bookImg, bookstore, bookstoreLogo, title } from './books.module.css'
+import { books, bookImg, bookstore, bookstoreLogo, bookTitle } from './books.module.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore from 'swiper'
+import 'swiper/swiper-bundle.css'
 import { useStaticQuery, graphql } from 'gatsby'
-
-
-
-const queryImage = graphql`{
-    allFile(
-      filter: {
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-        relativeDirectory: { eq: "bookstores" }
-      }
-    ) {
+  // allFile(
+  //     filter: {
+  //       extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+  //       relativeDirectory: { eq: "bookstores" }
+  //     }
+  //   ) {
+  //     edges {
+  //       node {
+  //         uid
+  //         base
+  //         childImageSharp {
+  //           fluid {
+  //             ...GatsbyImageSharpFluid
+  //           }
+  //         }
+  //       }
+  //     }
+  //   },
+  //   file(relativePath: {eq: "bookmockup.png"}){
+	// 	childImageSharp{
+	// 		fluid{
+	// 		...GatsbyImageSharpFluid
+  //     }
+  //   }
+  // }
+const queryData = graphql`{
+  books: allBooksDataJson {
       edges {
         node {
-          uid
-          base
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+          title
+          subtitle
+          blurb
+          bookImage {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          id
+          bookstoreLinks {
+            bookstoreName
+            url
+            bookstoreImg {
+              id
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
       }
-    },
-    file(relativePath: {eq: "bookmockup.png"}){
-		childImageSharp{
-			fluid{
-			...GatsbyImageSharpFluid
-      }
     }
-  }
 }
 `
 
 const Books = () => {
 
-    const data = useStaticQuery(queryImage)
+    const data = useStaticQuery(queryData)   
 
-    const onlineBookstore = {
-      "amazon": "https://www.amazon.com/Uncommon-Black-Journey-Mel-King/dp/1643670956/ref=sr_1_1?dchild=1&keywords=uncommon+by+mel+king&qid=1612682910&sr=8-1",
-      "bam": "https://www.booksamillion.com/p/Uncommon/Mel-King/9781643670959?id=8126181266996",
-      "b&n": "https://www.barnesandnoble.com/w/uncommon-mel-king/1129802360?ean=9781643670959"
-    }
+    // const onlineBookstore = {
+    //   "amazon": "https://www.amazon.com/Uncommon-Black-Journey-Mel-King/dp/1643670956/ref=sr_1_1?dchild=1&keywords=uncommon+by+mel+king&qid=1612682910&sr=8-1",
+    //   "bam": "https://www.booksamillion.com/p/Uncommon/Mel-King/9781643670959?id=8126181266996",
+    //   "b&n": "https://www.barnesandnoble.com/w/uncommon-mel-king/1129802360?ean=9781643670959"
+    // }
+
 
     return (
         <section className={books}>
-            <article className="books-center">
-              <aside className={title}>
+          <Swiper>
+            {
+              data.books.edges.map( ({ node }) => {
+                const { title, id, bookstoreLinks, subtitle, blurb, bookImage } = node
+                return <SwiperSlide key={id}>
+                  <div className={bookTitle}>
+                      <h1>{title}</h1>
+                      <span>{subtitle}</span>
+                  </div>
+                  <aside className={bookImg}>
+                    <Image fluid={bookImage.childImageSharp.fluid} alt={`${title} by Mel King`}/>
+                  </aside>
+                  <div className="blurb">
+                    <p>{blurb}</p>
+                  </div>
+                  <h3>Buy the book:</h3>
+                  <div className={bookstore}>
+                    {
+                      bookstoreLinks.map(({ url, bookstoreImg, bookstoreName }) => {
+                        const { childImageSharp, id } = bookstoreImg
+
+                        return <a href={url} key={id} className={bookstoreLogo}>
+                          <Image fluid={childImageSharp.fluid} alt={bookstoreName}/>
+                        </a>
+                      })
+                    }
+                  </div>
+                </SwiperSlide>
+              })
+            }
+          </Swiper>
+           {/* <article className="books-center">
+              <aside className={bookTitle}>
                 <h1>uncommon</h1>
                 <span>A BLACK MAN'S JOURNEY</span>
               </aside>
@@ -72,7 +133,7 @@ const Books = () => {
                   }
                 </div>
               </div>
-            </article>
+            </article> */}
         </section>
     )
 }

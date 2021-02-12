@@ -3,21 +3,22 @@
   background-color: #ffffff;
 }
 
-.title {
+.bookTitle {
   margin-bottom: 50px;
 }
-.title h1,
+.bookTitle h1,
 span {
   letter-spacing: 0.5rem;
+  text-transform: uppercase;
 }
 
 .bookImg div {
   width: 10rem;
   background: rgba(0, 0, 0, 0);
   margin-bottom: 2.5rem;
-  -webkit-box-shadow: 10px 1px 180px -50px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 10px 1px 180px -50px rgba(0, 0, 0, 1);
-  box-shadow: 10px 1px 180px -50px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 2px 6px 26px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 6px 26px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 6px 26px 5px rgba(0, 0, 0, 0.75);
 }
 
 .bookstore {
