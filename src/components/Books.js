@@ -2,11 +2,11 @@ import React from 'react'
 import Image from 'gatsby-image'
 import { booksSection, bookImg, bookstore, logo, bookTitle, bookBlurb } from './books.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination } from 'swiper'
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.css'
 import { useStaticQuery, graphql } from 'gatsby'
   
-SwiperCore.use([ Navigation, Pagination ])
+SwiperCore.use([ Navigation, Pagination, Autoplay ])
 const queryData = graphql`{
   books: allBooksDataJson {
     edges {
@@ -42,16 +42,21 @@ const queryData = graphql`{
 
 const Books = () => {
 
-    const data = useStaticQuery(queryData)   
+    const data = useStaticQuery(queryData)  
+    
+    
 
     return (
       <section className={booksSection}>
         <Swiper 
+          grabCursor={true}
           navigation 
           pagination 
           loop 
           spaceBetween={100}
-          autoplay={1000}
+          autoplay={{
+            delay:5000
+          }}
         >
           {
             data.books.edges.map( ({ node }) => {
