@@ -1,4 +1,4 @@
-.books {
+.booksSection {
   padding-top: 75px;
   background-color: #ffffff;
 }
@@ -10,6 +10,10 @@
 span {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
+}
+
+.bookBlurb {
+  width: min(90vw, 855px);
 }
 
 .bookImg div {
@@ -27,6 +31,6 @@ span {
   justify-content: space-evenly;
 }
 
-.bookstoreLogo div {
+.logo div {
   width: 5rem;
 }

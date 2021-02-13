@@ -7,17 +7,17 @@
     "bookstoreLinks": [
       {
         "bookstoreName": "amazon",
-        "bookstoreImg" : "../images/bookstores/amazon.JPG",
+        "bookstoreLogo" : "../images/bookstores/amazon.JPG",
         "url": "https://www.amazon.com/Uncommon-Black-Journey-Mel-King/dp/1643670956/ref=sr_1_1?dchild=1&keywords=uncommon+by+mel+king&qid=1612682910&sr=8-1"
       },
       {
         "bookstoreName": "barnes and noble",
-        "bookstoreImg" : "../images/bookstores/b&n.JPG",
+        "bookstoreLogo" : "../images/bookstores/b&n.JPG",
         "url": "https://www.barnesandnoble.com/w/uncommon-mel-king/1129802360?ean=9781643670959"
       },
       {
         "bookstoreName": "books-a-million",
-        "bookstoreImg" : "../images/bookstores/bam.JPG",
+        "bookstoreLogo" : "../images/bookstores/bam.JPG",
         "url": "https://www.booksamillion.com/p/Uncommon/Mel-King/9781643670959?id=8126181266996"
       }
     ]
@@ -30,17 +30,17 @@
     "bookstoreLinks": [
       { 
         "bookstoreName": "amazon",
-        "bookstoreImg" : "../images/bookstores/amazon.JPG",
+        "bookstoreLogo" : "../images/bookstores/amazon.JPG",
         "url": "t.ly/IZLc"
       },
       {
         "bookstoreName": "barnes and noble",
-        "bookstoreImg" : "../images/bookstores/b&n.JPG",
+        "bookstoreLogo" : "../images/bookstores/b&n.JPG",
         "url": "t.ly/4qjg"
       },
       {
         "bookstoreName": "books-a-million",
-        "bookstoreImg" : "../images/bookstores/bam.JPG",
+        "bookstoreLogo" : "../images/bookstores/bam.JPG",
         "url": "t.ly/g9zj"
       }
     ]

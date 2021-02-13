@@ -8,11 +8,9 @@ import Author from '../components/Author'
 const index = () => {
   return (
     <Layout>
-      <div>
-        <Author />
-        <Books />
-        <Contact />
-      </div>
+      <Author />
+      <Books />
+      <Contact />
     </Layout>
   )
 }

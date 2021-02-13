@@ -3,7 +3,6 @@
 
 module.exports = {
   flags: {
-    THE_FLAG: false, 
     PRESERVE_WEBPACK_CACHE: true,
    },
   siteMetadata: {

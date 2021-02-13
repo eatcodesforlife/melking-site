@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
 
+:root {
+  --primary-color: #703e97;
+  --secondary-color: #111111;
+  --white: white;
+}
 * {
   padding: 0;
   margin: 0;
@@ -13,12 +18,12 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 a:hover,
 a:focus {
-  color: #703e97;
+  color: var(--primary-color);
 }
 
 h1 {
@@ -46,7 +51,23 @@ section div {
 }
 
 footer {
-  background-color: #111111;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--white);
   padding: 1rem 0;
+}
+
+.swiper-button-prev::after {
+  margin-left: -0.9em;
+}
+.swiper-button-next::after {
+  margin-right: -0.9em;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--primary-color);
+  font-size: 1.75rem !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
 }

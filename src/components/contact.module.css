@@ -2,6 +2,9 @@
   background-color: #111111;
   color: white;
 }
+.contact article {
+  display: grid;
+}
 .title {
   margin: -10vh auto 10vh auto;
 }

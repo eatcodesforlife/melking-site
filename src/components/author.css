@@ -1,6 +1,6 @@
 .author {
-  background-color: #703e97;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
   padding-top: 75px;
 }
 .authorCenter {

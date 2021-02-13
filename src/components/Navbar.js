@@ -1,6 +1,30 @@
 import React from 'react'
-import { navbar } from './navbar.module.css'
+import { navbar , active} from './navbar.module.css'
 import { Link } from 'gatsby'
+
+
+const links = [
+    {
+        id: 1,
+        url: '/',
+        menuText: 'home'
+    },
+    {
+        id: 2,
+        url: '/author',
+        menuText: 'author'
+    },
+    {
+        id: 3,
+        url: '/books',
+        menuText: 'books'
+    },
+    {
+        id: 4,
+        url: '/contact',
+        menuText: 'contact'
+    },
+]
 
 const Navbar = () => {
 
@@ -12,18 +36,15 @@ const Navbar = () => {
                     <h1>mel king</h1>
                 </Link>
                 <ul>
-                    <li>                    
-                        <Link to='/' >home</Link>
-                    </li>
-                    <li>                    
-                        <Link to='/author' >author</Link>
-                    </li>
-                    <li>
-                        <Link to='/books' >books</Link>
-                    </li>
-                    <li>
-                        <Link to='/contact' >contact</Link>
-                    </li>
+                    {
+                        links.map( ({ id, url, menuText }) => (
+                            <li key={id}>
+                                <Link to={url} activeClassName={active}>
+                                    {menuText}
+                                </Link>
+                            </li>        
+                        ))
+                    }
                 </ul>
             </nav>
         </div>
